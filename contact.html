@@ -9,6 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+    <!-- emailjs -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init({
+                publicKey: "dXJ8VnSISQpvExOxb",
+            });
+        })();
+    </script>
+
+    <script src="static/js/form.js"></script>
+
 </head>
 <body>
     <header>
@@ -49,8 +64,7 @@
                         </div>
                         <div class="info-card">
                             <h3>Business Hours</h3>
-                            <p><strong>Monday - Friday:</strong> 9am - 5pm</p>
-                            <p><strong>Sat - Sun:</strong> 9am - 5pm</p>
+                            <p><strong>7 days/week:</strong> 9am - 5pm</p>
                         </div>
                         <div class="info-card">
                             <h3>Service Area</h3>
@@ -60,19 +74,7 @@
                     </div>
 
                     <div class="contact-form-container">
-                        <form id="contact-form" class="contact-form" action="https://formsubmit.co/vincenttaddeo@yahoo.com" method="POST">
-                            <!-- Anti-spam honeypot -->
-                            <input type="text" name="_honey" style="display: none;">
-                            
-                            <!-- Disable captcha -->
-                            <input type="hidden" name="_captcha" value="false">
-                            
-                            <!-- Success page redirect -->
-                            <input type="hidden" name="_next" value="index.html">
-                            
-                            <!-- Email subject -->
-                            <input type="hidden" name="_subject" value="New Detail Request!">
-
+                        <form id="contact-form" class="contact-form">
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" name="name" required>
@@ -102,7 +104,7 @@
                                 <textarea id="message" name="message" rows="4" required></textarea>
                             </div>
                             
-                            <button type="submit" class="submit-btn">Send Message</button>
+                            <button type="submit" class="submit-btn" onclick="sendMail()">Send Message</button>
                         </form>
                     </div>
                 </div>
