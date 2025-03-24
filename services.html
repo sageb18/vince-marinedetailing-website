@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="assets/vince-marine-detailing-favicon.png" type="image/png"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">VINCE'S MARINE DETAILING</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html" class="active">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <a class="contact" href="contact.html">
+                    <button class="contact-btn">Contact</button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="container-center-block">
+                <div class="hero-text-block">
+                    <h1 class="hero-text">Our Services</h1>
+                    <p class="hero-slogan">Professional detailing for boats and automobiles</p>
+                </div>
+                
+                <div class="services-grid">
+                    <div class="service-category marine">
+                        <h2>Marine Detailing</h2>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h3>Exterior Services</h3>
+                                <ul>
+                                    <li>Hull cleaning and waxing</li>
+                                    <li>Teak restoration and maintenance</li>
+                                    <li>Metal polishing</li>
+                                    <li>Oxidation removal</li>
+                                    <li>UV protection treatment</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h3>Interior Services</h3>
+                                <ul>
+                                    <li>Cabin deep cleaning</li>
+                                    <li>Leather conditioning</li>
+                                    <li>Mold and mildew treatment</li>
+                                    <li>Carpet and upholstery cleaning</li>
+                                    <li>Teak interior restoration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="service-category automotive">
+                        <h2>Automotive Detailing</h2>
+                        <div class="service-items">
+                            <div class="service-item">
+                                <h3>Exterior Services</h3>
+                                <ul>
+                                    <li>Paint correction and polishing</li>
+                                    <li>Ceramic coating application</li>
+                                    <li>Premium hand wash</li>
+                                    <li>Wheel and tire detailing</li>
+                                    <li>Headlight restoration</li>
+                                </ul>
+                            </div>
+                            <div class="service-item">
+                                <h3>Interior Services</h3>
+                                <ul>
+                                    <li>Full interior detailing</li>
+                                    <li>Leather cleaning and conditioning</li>
+                                    <li>Carpet and upholstery deep cleaning</li>
+                                    <li>Odor elimination</li>
+                                    <li>Dashboard and trim restoration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <p class="cta-text">Ready to experience premium detailing service?</p>
+                    <a href="tel:+17144697929" class="cta-button">Call Vince Today</a>
+                </div>
+
+                <footer>
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Contact</h3>
+                            <p>(714) 469-7929</p>
+                            <p>vincenttaddeo@yahoo.com</p>
+                            <p>Newport Beach, CA</p>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Vince's Marine Detailing. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

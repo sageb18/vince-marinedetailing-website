@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Vince's Marine Detailing</title>
+
+    <link rel="stylesheet" href="static/css/styles.css">
+
+    <link rel="icon" href="assets/vince-marine-detailing-favicon.png" type="image/png"/> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <header>
+        <a href="#" class="logo">VINCE'S MARINE DETAILING</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html" id="#home">Home</a></li>
+                <li><a href="services.html" id="#services">Services</a></li>
+                <li><a href="gallery.html" id="#gallery">Gallery</a></li>
+                <li><a href="about.html" id="#about">About</a></li>
+                <a class="contact" href="contact.html">
+                    <button class="contact-btn">Contact</button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section class="hero">
+        <div class="container">
+            <div class="container-center-block">
+                <div class="hero-text-block">
+                    <h1 class="hero-text">Serving Orange County Since 1982</h1>
+                    <p class="hero-slogan">Bringing your vehicle back to life with precision and care.</p>
+                </div>
+                <div class="grid-blocks">
+                    <a href="about.html" class="grid-block">
+                        <img src="https://images.unsplash.com/photo-1542473931110-04d2852d5431?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="About">
+                        <h2>About</h2>
+                        <p>Learn about our dedication to excellence</p>
+                    </a>
+                    <a href="services.html" class="grid-block">
+                        <img src="https://images.unsplash.com/photo-1575844611398-2a68400b437c?q=80&w=2672&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Services">
+                        <h2>Services</h2>
+                        <p>Explore our premium detailing services</p>
+                    </a>
+                    <a href="gallery.html" class="grid-block">
+                        <img src="./images/hero_gallery_pic.png" alt="Gallery">
+                        <h2>Gallery</h2>
+                        <p>View our stunning transformations</p>
+                    </a>
+                </div>
+
+                <div class="cta-section">
+                    <p class="cta-text">Ready to restore your vessel to its original glory?</p>
+                    <a href="tel:+17144697929" class="cta-button">Call Vince Today</a>
+                </div>
+
+                <footer>
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Contact</h3>
+                            <p>(714) 469-7929</p>
+                            <p>vincenttaddeo@yahoo.com</p>
+                            <p>Newport Beach, CA</p>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Vince's Marine Detailing. All rights reserved.</p>
+                    </div>
+                </footer>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+    </section>
+
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+
+</body>
+</html>

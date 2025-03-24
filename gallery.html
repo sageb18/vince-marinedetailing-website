@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="assets/vince-marine-detailing-favicon.png" type="image/png"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">VINCE'S MARINE DETAILING</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html" class="active">Gallery</a></li>
+                <li><a href="about.html">About</a></li>
+                <a class="contact" href="contact.html">
+                    <button class="contact-btn">Contact</button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="container-center-block">
+                <div class="hero-text-block">
+                    <h1 class="hero-text">Gallery</h1>
+                    <p class="hero-slogan">Check out my work!</p>
+                </div>
+
+                <div class="gallery-filter">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="marine">Marine</button>
+                    <button class="filter-btn" data-filter="automotive">Automotive</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item marine">
+                        <img src="https://placehold.co/600x400" alt="Marine Detail 1">
+                        <div class="gallery-overlay">
+                            <h3>Yacht Exterior Detail</h3>
+                            <p>Complete hull restoration and waxing</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item automotive">
+                        <img src="https://placehold.co/600x800" alt="Auto Detail 1">
+                        <div class="gallery-overlay">
+                            <h3>Paint Correction</h3>
+                            <p>Full paint correction and ceramic coating</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item marine">
+                        <img src="https://placehold.co/600x600" alt="Marine Detail 2">
+                        <div class="gallery-overlay">
+                            <h3>Interior Restoration</h3>
+                            <p>Cabin deep cleaning and leather treatment</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item automotive">
+                        <img src="https://placehold.co/600x400" alt="Auto Detail 2">
+                        <div class="gallery-overlay">
+                            <h3>Interior Detail</h3>
+                            <p>Complete interior restoration</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item marine">
+                        <img src="https://placehold.co/600x800" alt="Marine Detail 3">
+                        <div class="gallery-overlay">
+                            <h3>Teak Restoration</h3>
+                            <p>Full teak deck restoration</p>
+                        </div>
+                    </div>
+                    <div class="gallery-item automotive">
+                        <img src="https://placehold.co/600x600" alt="Auto Detail 3">
+                        <div class="gallery-overlay">
+                            <h3>Show Car Prep</h3>
+                            <p>Concours level detailing</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <p class="cta-text">Ready to transform your vehicle?</p>
+                    <a href="tel:+17144697929" class="cta-button">Call Vince Today</a>
+                </div>
+
+                <footer>
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Contact</h3>
+                            <p>(714) 469-7929</p>
+                            <p>vincenttaddeo@yahoo.com</p>
+                            <p>Newport Beach, CA</p>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Vince's Marine Detailing. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Hamburger menu script
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+
+        // Gallery filter script
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                // Add active class to clicked button
+                button.classList.add('active');
+
+                const filter = button.getAttribute('data-filter');
+
+                galleryItems.forEach(item => {
+                    if (filter === 'all' || item.classList.contains(filter)) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="static/css/styles.css">
+    <link rel="icon" href="assets/vince-marine-detailing-favicon.png" type="image/png"/> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="index.html" class="logo">VINCE'S MARINE DETAILING</a>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <a class="contact" href="contact.html">
+                    <button class="contact-btn">Contact</button>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="container-center-block">
+                <div class="hero-text-block">
+                    <h1 class="hero-text">About Vince</h1>
+                    <p class="hero-slogan">Four decades of excellence in marine and automotive detailing</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-section story">
+                        <div class="about-image">
+                            <img src="https://brunswick.scene7.com/is/image/brunswick/Huntington-Beach_Hero?$H-2000-2000$&fit=constrain&fmt=webp-alpha" alt="Newport Beach Boats">
+                        </div>
+                        <div class="about-text">
+                            <h2>My Story</h2>
+                            <p>Since 1982, Vince's Marine Detailing has been the trusted name in Orange County for premium boat and automotive detailing services. What started as a hobby has grown into a legacy of excellence, serving countless satisfied customers throughout Southern California.</p>
+                            <p>With over 40 years of experience, I've developed specialized techniques and use only the finest products to ensure your vessel or vehicle receives the care it deserves.</p>
+                        </div>
+                    </div>
+
+                    <div class="about-section values">
+                        <div class="about-text">
+                            <h2>My Values</h2>
+                            <div class="values-grid">
+                                <div class="value-item">
+                                    <h3>Excellence</h3>
+                                    <p>I never compromise on quality, ensuring every detail meets my high standards.</p>
+                                </div>
+                                <div class="value-item">
+                                    <h3>Integrity</h3>
+                                    <p>Trust and honesty are the foundation of my long-standing relationships with clients.</p>
+                                </div>
+                                <div class="value-item">
+                                    <h3>Expertise</h3>
+                                    <p>Decades of experience combined with continuous learning keeps me at the forefront of detailing.</p>
+                                </div>
+                                <div class="value-item">
+                                    <h3>Dedication</h3>
+                                    <p>Every project receives my full attention and commitment to excellence.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-section service-area">
+                        <div class="about-text">
+                            <h2>Service Area</h2>
+                            <p>Based in Newport Beach, I proudly serve all of Orange County and surrounding areas. From Dana Point to Huntington Harbor, I bring my mobile detailing services directly to your location.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <p class="cta-text">Ready to give your ride the treatment it deserves?</p>
+                    <a href="tel:+17144697929" class="cta-button">Call Vince Today</a>
+                </div>
+
+                <footer>
+                    <div class="footer-content">
+                        <div class="footer-section">
+                            <h3>Contact</h3>
+                            <p>(714) 469-7929</p>
+                            <p>vincenttaddeo@yahoo.com</p>
+                            <p>Newport Beach, CA</p>
+                        </div>
+                        <div class="footer-section">
+                            <h3>Quick Links</h3>
+                            <ul>
+                                <li><a href="services.html">Services</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="about.html">About</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer-bottom">
+                        <p>&copy; 2025 Vince's Marine Detailing. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('nav');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            nav.classList.toggle('active');
+        });
+
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                nav.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>
