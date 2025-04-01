@@ -128,9 +128,11 @@ nav {
 }
 
 .hero-text-block {
+    display: flex;
+    flex-direction: column;
     padding-top: 2rem;
     margin-inline: auto;
-    max-width: 60%;
+    max-width: 80%;
     width: 100%;
 }
 
@@ -164,6 +166,23 @@ nav {
     }
 }
 
+@media (max-width: 1280px) {
+    .hero-text-block {
+        max-width: 70%;
+        width: 100%;
+        padding: 0;
+    }
+
+    .hero-text {
+        font-size: 4rem;
+    }
+
+    .hero-slogan {
+        font-size: 1.5rem;
+    }
+
+}
+
 @media (max-width: 900px) {
     .nav-links {
         gap: 10px;
@@ -176,6 +195,7 @@ nav {
     .logo {
         font-size: 1.4rem;
     }
+
 }
 
 @media (max-width: 768px) {
