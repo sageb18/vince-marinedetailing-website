@@ -181,7 +181,7 @@ nav {
 @media (max-width: 768px) {
     .hamburger {
         display: block;
-        z-index: 2;
+        z-index: 3;
     }
 
     .hamburger.active span:nth-child(2) {
@@ -206,6 +206,7 @@ nav {
         backdrop-filter: blur(10px);
         padding-top: 80px;
         transition: 0.3s ease;
+        z-index: 2;
     }
 
     nav.active {
@@ -223,15 +224,16 @@ nav {
     }
 
     .hero-text-block {
+        max-width: 100%;
         width: 100%;
     }
 
     .hero-text {
-        font-size: 2.5rem;
+        font-size: 2.3rem;
     }
 
     .hero-slogan {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
 }
 
